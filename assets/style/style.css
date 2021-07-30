@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+canvas {
+  padding: 0;
+  margin: auto;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  canvas {
+    padding-top: 8vh;
+    width: 320px;
+    height: 400px;
+  }
+}
