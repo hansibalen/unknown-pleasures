@@ -32,9 +32,10 @@ for (let i = 0; i < nLines; i++) {
   let mus = [];
   let sigmas = [];
   for (let j = 0; j < nModes; j++) {
-    mus[j] = randNormal(mx, 100);
+    mus[j] = rand(mx - 50, mx + 50);
     sigmas[j] = randNormal(24, 30);
   }
+  let w = y;
   for (let k = 0; k < nPoints; k++) {
     x = x + dx;
     let noise = 0;
@@ -45,8 +46,9 @@ for (let i = 0; i < nLines; i++) {
     // ctx.lineTo(x, y - 1000 * noise);
 
     //Adjust wave lines similar to the album cover
-    var yy = y - (500 + Math.random() * 200) * noise + Math.random();
+    let yy = 0.3 * w + 0.7 * (y - 600 * noise + noise * Math.random() * 200 + Math.random());
     ctx.lineTo(x, yy);
+    w = yy;
   }
   //Cover pixels of previous line
   ctx.fill();
@@ -62,6 +64,7 @@ ctx.lineWidth = 1.2;
 ctx.strokeStyle = "white";
 ctx.stroke();
 
+//Generate random values
 function randInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -70,7 +73,6 @@ function rand(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-//Generate random values
 function randNormal(mu, sigma) {
   let sum = 0;
   for (let i = 0; i < 6; i += 1) {
