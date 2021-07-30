@@ -20,12 +20,16 @@ let dy = (yMax - yMin) / nLines;
 let x = xMin;
 let y = yMin;
 
+let mx = (xMin + xMax) / 2;
+
 //Two nested loops to iterate each line one by one
 for (let i = 0; i < nLines; i++) {
+  // Generate random parameters for the line's normal distribution
+  let mu = randNormal(mx, 50);
+  let sigma = randNormal(30, 30);
   for (let j = 0; j < nPoints; j++) {
     x = x + dx;
-    //This line adds random spikes to the lines
-    ctx.lineTo(x, y + Math.random());
+    ctx.lineTo(x, y - 1000 * normalPDF(x, mu, sigma));
   }
   x = xMin;
   y = y + dy;
