@@ -21,9 +21,12 @@ let x = xMin;
 let y = yMin;
 
 let mx = (xMin + xMax) / 2;
+ctx.fillStyle = "black";
+ctx.strokeStyle = "white";
 
 //Two nested loops to iterate each line one by one
 for (let i = 0; i < nLines; i++) {
+  ctx.beginPath();
   // Generate random parameters for the line's normal distribution
   let mu = randNormal(mx, 50);
   let sigma = randNormal(30, 30);
@@ -31,6 +34,11 @@ for (let i = 0; i < nLines; i++) {
     x = x + dx;
     ctx.lineTo(x, y - 1000 * normalPDF(x, mu, sigma));
   }
+  // Cover previous lines
+  ctx.fill();
+  // Draw current line
+  ctx.stroke();
+  // Go to next line
   x = xMin;
   y = y + dy;
   ctx.moveTo(x, y);
