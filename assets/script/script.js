@@ -35,3 +35,25 @@ for (let i = 0; i < nLines; i++) {
 ctx.lineWidth = 1.2;
 ctx.strokeStyle = "white";
 ctx.stroke();
+
+function rand(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+//Generate random values
+function randNormal(mu, sigma) {
+  let sum = 0;
+  for (let i = 0; i < 6; i += 1) {
+    sum += rand(-1, 1);
+  }
+  let norm = sum / 6;
+  return mu + sigma * norm;
+}
+
+//Propability Density Formula function
+function normalPDF(x, mu, sigma) {
+  let sigma2 = Math.pow(sigma, 2);
+  let numerator = Math.exp(-Math.pow(x - mu, 2) / (2 * sigma2));
+  let denominator = Math.sqrt(2 * Math.PI * sigma2);
+  return numerator / denominator;
+}
