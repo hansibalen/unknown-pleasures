@@ -1,17 +1,23 @@
+body {
+  background-color: #000;
+}
+
 h1 {
   text-align: center;
   font-family: Helvetica, sans-serif;
+  color: #fff;
 }
 
 canvas {
   padding: 0;
   margin: auto;
   display: block;
+  border: 3px solid #fff;
 }
 
 @media screen and (max-width: 768px) {
   canvas {
-    padding-top: 8vh;
+    margin-top: 3rem;
     width: 320px;
     height: 400px;
   }
