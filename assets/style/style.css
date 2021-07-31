@@ -1,15 +1,23 @@
+/* Fonts */
+@font-face {
+  font-family: "Helvetica Thin";
+  src: url("/assets/fonts/HelveticaNeue\ Thin.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-color: #000;
 }
 
 h1 {
+  font-family: "Helvetica Thin";
+  letter-spacing: 4px;
   text-align: center;
-  font-family: Helvetica, sans-serif;
   color: #fff;
 }
 
 canvas {
-  padding: 0;
   margin: auto;
   display: block;
   border: 3px solid #fff;
