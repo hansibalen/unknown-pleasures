@@ -7,7 +7,8 @@ A rendition of Joy Division's "Unknown Pleasures" album cover.\
 
 On this project, I generated random lines, inspired by the famous Joy Division album, "Unknown Pleasures".\
 To achieve this, I created a canvas and added the lines with their appropriate base values and properties.\
-I used two nested loops so each line of the cover could be drawn one right after the other. I added Math.random() in order for the lines to have small edges in random places throughtout.
+I used two nested loops so each line of the cover could be drawn one right after the other.\
+I added Math.random() in order for the lines to have small edges in random places throughtout.
 
 ![Basic lines](/assets/images/img0.png)
 
