@@ -16,6 +16,15 @@ Then, I added two functions which generate random values for the line properties
 
 ![Probability Density Function](/assets/images/pdf.png)
 
+```
+function normalPDF(x, mu, sigma) {
+  let sigma2 = Math.pow(sigma, 2);
+  let numerator = Math.exp(-Math.pow(x - mu, 2) / (2 * sigma2));
+  let denominator = Math.sqrt(2 * Math.PI * sigma2);
+  return numerator / denominator;
+}
+```
+
 ![Curved lines](/assets/images/img1.png)
 
 Right after, I used the CanvasRenderingContext method to make the lines smoother.
