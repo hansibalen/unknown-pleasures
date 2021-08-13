@@ -16,6 +16,8 @@ Then, I added two functions which generate random values for the line properties
 
 ![Probability Density Function](https://i.ibb.co/jJYNfgg/pdf.png)
 
+The PDF formula converted to JavaScript:
+
 ```
 function normalPDF(x, mu, sigma) {
   let sigma2 = Math.pow(sigma, 2);
