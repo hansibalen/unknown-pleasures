@@ -3,6 +3,11 @@
 A rendition of Joy Division's "Unknown Pleasures" album cover.\
 [Live site](https://unknown-pleasures-js.netlify.app/)
 
+## Table of content
+
+- [Description](#description)
+- [Installation](#installation)
+
 ## Description
 
 On this project, I generated random lines, inspired by the famous Joy Division album, "Unknown Pleasures".\
