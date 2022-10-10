@@ -2,8 +2,7 @@
 let canvas = document.getElementById("cover");
 let ctx = canvas.getContext("2d");
 
-ctx.fillStyle = "black";
-ctx.fillRect(0, 0, canvas.width, canvas.height);
+ctx.fillStyle = "#191919";
 
 let xMin = 140;
 let xMax = canvas.width - xMin;
@@ -21,7 +20,6 @@ let x = xMin;
 let y = yMin;
 
 let mx = (xMin + xMax) / 2;
-ctx.fillStyle = "black";
 ctx.strokeStyle = "white";
 
 //Two nested loops to iterate each line of the cover one by one
