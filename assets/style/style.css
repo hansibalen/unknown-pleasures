@@ -8,25 +8,46 @@
 
 body {
   background-color: #191919;
-}
-
-h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  box-sizing: content-box;
+  padding: 12px;
   font-family: "Helvetica Thin";
   letter-spacing: 4px;
-  text-align: center;
   color: #fff;
 }
 
 canvas {
-  margin: auto;
-  display: block;
   border: 3px solid #fff;
 }
 
+button {
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
+  body {
+    gap: 3rem;
+  }
+
   canvas {
-    margin-top: 3rem;
     width: 320px;
     height: 400px;
+  }
+}
+
+@media screen and (max-width: 372px) {
+  body {
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+
+  canvas {
+    width: 270px;
+    height: 350px;
   }
 }
